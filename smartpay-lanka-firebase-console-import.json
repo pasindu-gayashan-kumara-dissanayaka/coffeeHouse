@@ -1,0 +1,418 @@
+{
+  "meta": {
+    "appName": "SmartPay Lanka",
+    "databaseType": "Firebase Realtime Database",
+    "seedVersion": "1.1",
+    "country": "Sri Lanka",
+    "currency": "LKR",
+    "generatedAt": "2026-03-15T16:20:00+05:30"
+  },
+  "app_config": {
+    "general": {
+      "appName": "SmartPay Lanka",
+      "country": "Sri Lanka",
+      "currency": "LKR",
+      "maintenanceMode": false,
+      "railwayApiEnabled": true,
+      "healthcareModuleEnabled": true,
+      "kycRequired": true,
+      "biometricLoginEnabled": true,
+      "otpRequiredForTransfers": true
+    },
+    "limits": {
+      "defaultDailyTransferLimit": 100000,
+      "maxReloadAmount": 10000,
+      "maxBillPaymentAmount": 250000
+    }
+  },
+  "users": {
+    "user_demo_001": {
+      "uid": "user_demo_001",
+      "fullName": "Demo User One",
+      "email": "demo1@smartpaylanka.demo",
+      "mobile": "+94770000001",
+      "address": "Colombo, Sri Lanka",
+      "nicOrPassportType": "NIC",
+      "nicOrPassportNoMasked": "2000********78",
+      "dob": "2000-05-20",
+      "profilePhotoUrl": "",
+      "kycStatus": "Pending",
+      "biometricEnabled": false,
+      "consentAccepted": true,
+      "privacyPolicyAcceptedAt": "2026-03-15T10:05:00Z",
+      "termsAcceptedAt": "2026-03-15T10:05:00Z",
+      "status": "active",
+      "createdAt": "2026-03-15T10:00:00Z",
+      "updatedAt": "2026-03-15T10:05:00Z"
+    },
+    "user_demo_002": {
+      "uid": "user_demo_002",
+      "fullName": "Demo User Two",
+      "email": "demo2@smartpaylanka.demo",
+      "mobile": "+94770000002",
+      "address": "Kandy, Sri Lanka",
+      "nicOrPassportType": "Passport",
+      "nicOrPassportNoMasked": "N9******4",
+      "dob": "1998-11-14",
+      "profilePhotoUrl": "",
+      "kycStatus": "Approved",
+      "biometricEnabled": true,
+      "consentAccepted": true,
+      "privacyPolicyAcceptedAt": "2026-03-15T11:00:00Z",
+      "termsAcceptedAt": "2026-03-15T11:00:00Z",
+      "status": "active",
+      "createdAt": "2026-03-15T11:00:00Z",
+      "updatedAt": "2026-03-15T11:05:00Z"
+    }
+  },
+  "kyc_requests": {
+    "kyc_demo_001": {
+      "kycId": "kyc_demo_001",
+      "userId": "user_demo_001",
+      "documentType": "NIC",
+      "documentNumberMasked": "2000********78",
+      "documentFrontUrl": "",
+      "documentBackUrl": "",
+      "selfieUrl": "",
+      "status": "Pending",
+      "reviewNotes": "",
+      "submittedAt": "2026-03-15T10:10:00Z",
+      "reviewedAt": null,
+      "reviewedBy": null
+    },
+    "kyc_demo_002": {
+      "kycId": "kyc_demo_002",
+      "userId": "user_demo_002",
+      "documentType": "Passport",
+      "documentNumberMasked": "N9******4",
+      "documentFrontUrl": "",
+      "documentBackUrl": "",
+      "selfieUrl": "",
+      "status": "Approved",
+      "reviewNotes": "Verified with demo data",
+      "submittedAt": "2026-03-15T11:10:00Z",
+      "reviewedAt": "2026-03-15T11:40:00Z",
+      "reviewedBy": "admin_demo_001"
+    }
+  },
+  "wallets": {
+    "wallet_demo_001": {
+      "walletId": "wallet_demo_001",
+      "userId": "user_demo_001",
+      "currency": "LKR",
+      "balance": 25000,
+      "dailyTransferLimit": 100000,
+      "availableTransferLimit": 75000,
+      "status": "active",
+      "updatedAt": "2026-03-15T10:20:00Z"
+    },
+    "wallet_demo_002": {
+      "walletId": "wallet_demo_002",
+      "userId": "user_demo_002",
+      "currency": "LKR",
+      "balance": 75250,
+      "dailyTransferLimit": 200000,
+      "availableTransferLimit": 180000,
+      "status": "active",
+      "updatedAt": "2026-03-15T11:20:00Z"
+    }
+  },
+  "banks": {
+    "7010": {
+      "bankCode": "7010",
+      "bankName": "Bank of Ceylon",
+      "active": true
+    },
+    "7038": {
+      "bankCode": "7038",
+      "bankName": "People's Bank",
+      "active": true
+    },
+    "7056": {
+      "bankCode": "7056",
+      "bankName": "Commercial Bank",
+      "active": true
+    },
+    "7278": {
+      "bankCode": "7278",
+      "bankName": "Sampath Bank",
+      "active": true
+    },
+    "7463": {
+      "bankCode": "7463",
+      "bankName": "HNB",
+      "active": true
+    }
+  },
+  "bank_accounts": {
+    "ba_demo_001": {
+      "bankAccountId": "ba_demo_001",
+      "userId": "user_demo_001",
+      "bankCode": "7010",
+      "bankName": "Bank of Ceylon",
+      "branchName": "Colombo Fort",
+      "accountHolderName": "Demo User One",
+      "accountNumberMasked": "XXXXXX7890",
+      "accountNumberLast4": "7890",
+      "isPrimary": true,
+      "isVerified": true,
+      "createdAt": "2026-03-15T10:15:00Z"
+    },
+    "ba_demo_002": {
+      "bankAccountId": "ba_demo_002",
+      "userId": "user_demo_002",
+      "bankCode": "7056",
+      "bankName": "Commercial Bank",
+      "branchName": "Kandy City",
+      "accountHolderName": "Demo User Two",
+      "accountNumberMasked": "XXXXXX4567",
+      "accountNumberLast4": "4567",
+      "isPrimary": true,
+      "isVerified": true,
+      "createdAt": "2026-03-15T11:15:00Z"
+    }
+  },
+  "beneficiaries": {
+    "benef_demo_001": {
+      "beneficiaryId": "benef_demo_001",
+      "userId": "user_demo_001",
+      "nickname": "Amma",
+      "bankName": "Commercial Bank",
+      "bankCode": "7056",
+      "accountHolderName": "Family Member",
+      "accountNumberMasked": "XXXXXX1234",
+      "accountNumberLast4": "1234",
+      "favorite": true,
+      "createdAt": "2026-03-15T10:16:00Z"
+    }
+  },
+  "transactions": {
+    "txn_demo_001": {
+      "transactionId": "txn_demo_001",
+      "userId": "user_demo_001",
+      "type": "bank_transfer",
+      "direction": "debit",
+      "sourceWalletId": "wallet_demo_001",
+      "sourceBankAccountId": "ba_demo_001",
+      "beneficiaryId": "benef_demo_001",
+      "amount": 5000,
+      "fee": 25,
+      "currency": "LKR",
+      "status": "success",
+      "referenceNo": "SPL202603150001",
+      "note": "Monthly support",
+      "receiptUrl": "",
+      "createdAt": "2026-03-15T10:25:00Z",
+      "completedAt": "2026-03-15T10:25:20Z"
+    },
+    "txn_demo_002": {
+      "transactionId": "txn_demo_002",
+      "userId": "user_demo_002",
+      "type": "wallet_topup",
+      "direction": "credit",
+      "sourceWalletId": "wallet_demo_002",
+      "sourceBankAccountId": "ba_demo_002",
+      "beneficiaryId": "",
+      "amount": 10000,
+      "fee": 0,
+      "currency": "LKR",
+      "status": "success",
+      "referenceNo": "SPL202603150002",
+      "note": "Top-up",
+      "receiptUrl": "",
+      "createdAt": "2026-03-15T11:30:00Z",
+      "completedAt": "2026-03-15T11:30:10Z"
+    }
+  },
+  "mobile_operators": {
+    "dialog": {
+      "name": "Dialog",
+      "active": true
+    },
+    "mobitel": {
+      "name": "Mobitel",
+      "active": true
+    },
+    "airtel": {
+      "name": "Airtel",
+      "active": true
+    },
+    "hutch": {
+      "name": "Hutch",
+      "active": true
+    }
+  },
+  "mobile_reloads": {
+    "reload_demo_001": {
+      "reloadId": "reload_demo_001",
+      "userId": "user_demo_001",
+      "mobileNumber": "+94771234567",
+      "operator": "Dialog",
+      "amount": 500,
+      "status": "success",
+      "referenceNo": "REL202603150001",
+      "createdAt": "2026-03-15T10:30:00Z"
+    }
+  },
+  "billers": {
+    "ceb": {
+      "billerId": "ceb",
+      "name": "CEB",
+      "type": "electricity",
+      "active": true
+    },
+    "nwsdb": {
+      "billerId": "nwsdb",
+      "name": "National Water Supply",
+      "type": "water",
+      "active": true
+    },
+    "leco": {
+      "billerId": "leco",
+      "name": "LECO",
+      "type": "electricity",
+      "active": true
+    },
+    "dialog_home": {
+      "billerId": "dialog_home",
+      "name": "Dialog Home Broadband",
+      "type": "telecom",
+      "active": true
+    }
+  },
+  "bill_payments": {
+    "bill_demo_001": {
+      "billPaymentId": "bill_demo_001",
+      "userId": "user_demo_001",
+      "billerType": "electricity",
+      "billerName": "CEB",
+      "accountReference": "CEB-ACC-001",
+      "amount": 3250,
+      "status": "success",
+      "referenceNo": "BIL202603150001",
+      "createdAt": "2026-03-15T10:35:00Z"
+    }
+  },
+  "railway": {
+    "stations": {
+      "colombo_fort": {
+        "stationId": "colombo_fort",
+        "name": "Colombo Fort",
+        "city": "Colombo"
+      },
+      "kandy": {
+        "stationId": "kandy",
+        "name": "Kandy",
+        "city": "Kandy"
+      },
+      "galle": {
+        "stationId": "galle",
+        "name": "Galle",
+        "city": "Galle"
+      }
+    },
+    "live_board_colombo_fort": {
+      "station": "Colombo Fort",
+      "updatedAt": "2026-03-15T10:40:00Z",
+      "trains": {
+        "train_001": {
+          "trainNo": "1001",
+          "trainName": "Intercity Express",
+          "route": "Colombo Fort - Kandy",
+          "departureTime": "11:00",
+          "arrivalTime": "13:30",
+          "delayMinutes": 10,
+          "status": "Delayed"
+        },
+        "train_002": {
+          "trainNo": "1002",
+          "trainName": "Coastal Line",
+          "route": "Colombo Fort - Galle",
+          "departureTime": "11:20",
+          "arrivalTime": "13:45",
+          "delayMinutes": 0,
+          "status": "On Time"
+        }
+      }
+    }
+  },
+  "healthcare_providers": {
+    "provider_demo_001": {
+      "providerId": "provider_demo_001",
+      "name": "Asiri Central Hospital",
+      "type": "hospital",
+      "city": "Colombo",
+      "contactPhone": "+94 11 000 0000",
+      "services": {
+        "appointments": true,
+        "labReports": true,
+        "medicalBillPayments": true
+      },
+      "active": true,
+      "updatedAt": "2026-03-15T10:45:00Z"
+    },
+    "provider_demo_002": {
+      "providerId": "provider_demo_002",
+      "name": "Kandy Private Clinic",
+      "type": "clinic",
+      "city": "Kandy",
+      "contactPhone": "+94 81 000 0000",
+      "services": {
+        "appointments": true,
+        "labReports": false,
+        "medicalBillPayments": true
+      },
+      "active": true,
+      "updatedAt": "2026-03-15T11:45:00Z"
+    }
+  },
+  "notifications": {
+    "notif_demo_001": {
+      "notificationId": "notif_demo_001",
+      "userId": "user_demo_001",
+      "title": "Transfer Successful",
+      "message": "Your transfer of LKR 5,000 was completed successfully.",
+      "type": "transaction",
+      "isRead": false,
+      "createdAt": "2026-03-15T10:25:30Z"
+    }
+  },
+  "admins": {
+    "admin_demo_001": {
+      "adminId": "admin_demo_001",
+      "fullName": "System Admin",
+      "email": "admin@smartpaylanka.demo",
+      "role": "super_admin",
+      "active": true,
+      "createdAt": "2026-03-15T09:00:00Z"
+    }
+  },
+  "audit_logs": {
+    "log_demo_001": {
+      "logId": "log_demo_001",
+      "actorType": "user",
+      "actorId": "user_demo_001",
+      "action": "CREATE_TRANSFER",
+      "entityType": "transaction",
+      "entityId": "txn_demo_001",
+      "ipAddress": "127.0.0.1",
+      "deviceInfo": "Android Demo Device",
+      "status": "success",
+      "createdAt": "2026-03-15T10:25:20Z"
+    }
+  },
+  "support_faq": {
+    "faq_001": {
+      "question": "How do I complete KYC?",
+      "answer": "Upload your NIC or passport images and a clear selfie, then submit for review.",
+      "category": "KYC",
+      "active": true
+    },
+    "faq_002": {
+      "question": "How do I add a bank account?",
+      "answer": "Open Profile or Add Bank Account, enter bank details, and verify the account.",
+      "category": "Banking",
+      "active": true
+    }
+  }
+}
